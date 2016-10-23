@@ -1,0 +1,5 @@
+Tumblr Following Manager
+
+OAuth Consumer Key: yeJB1LQWpT6soRtAWlEegWTUJngcmT7YEzVxsuERwhGWRyTtO1
+
+Secret Key:  ibwWDimVtKOW1ay54ZoiigEeIRqq6kaKmwiFTWwp8H2emVPzoy
