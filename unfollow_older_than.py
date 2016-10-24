@@ -20,12 +20,11 @@ def main(days, offset, trial):
     offset = int(offset)
     now = datetime.now()
 
-    client = pytumblr.TumblrRestClient(Keys.consumer_key, Keys.consumer_secret, Keys.oauth_token, Keys.oauth_secret)
-
     if trial:
         print('Trial mode enabled. No blogs will be unfollowed.')
 
     while True:
+        client = pytumblr.TumblrRestClient(Keys.consumer_key, Keys.consumer_secret, Keys.oauth_token, Keys.oauth_secret)
         print('Requesting offset', offset, file=sys.stderr)
         following = client.following(offset=offset, limit=20)
         if 'blogs' in following:
