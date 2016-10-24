@@ -5,10 +5,10 @@
 import sys
 import click
 import pytumblr
-# import requests_oauthlib
 
 from datetime import datetime
 from time import sleep
+from config import Keys
 
 
 @click.command()
@@ -20,12 +20,7 @@ def main(days, offset, trial):
     offset = int(offset)
     now = datetime.now()
 
-    client = pytumblr.TumblrRestClient(
-        'yeJB1LQWpT6soRtAWlEegWTUJngcmT7YEzVxsuERwhGWRyTtO1',
-        'ibwWDimVtKOW1ay54ZoiigEeIRqq6kaKmwiFTWwp8H2emVPzoy',
-        '4jpWSxweuN2k6Dtbl4LlXJJdtF8uejN95mQE8kwaSELXM5AY5H',
-        '7Hb7dcmVIKosgXec53wLpLW0zIJXWhjxNTsgaQQRE1YK8gtb2I'
-    )
+    client = pytumblr.TumblrRestClient(Keys.consumer_key, Keys.consumer_secret, Keys.oauth_token, Keys.oauth_secret)
 
     if trial:
         print('Trial mode enabled. No blogs will be unfollowed.')

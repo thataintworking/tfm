@@ -1,7 +1,4 @@
 httplib2
 httpretty
 oauth2
-
-requests
-requests_oauthlib
-flask
+click
