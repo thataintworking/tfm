@@ -225,16 +225,16 @@ class TumblrRestClient(object):
         return self.send_api_request("post", url, {'url': blogname}, ['url'])
 
     @validate_blogname
-    def unfollow(self, blogname):
+    def unfollow(self, blogurl):
         """
         Unfollow the url of the given blog
 
-        :param blogname: a string, the blog url you want to follow
+        :param blogurl: a string, the blog url you want to follow
 
         :returns: a dict created from the JSON response
         """
         url = "/v2/user/unfollow"
-        return self.send_api_request("post", url, {'url': blogname}, ['url'])
+        return self.send_api_request("post", url, {'url': blogurl}, ['url'])
 
     def like(self, id, reblog_key):
         """
